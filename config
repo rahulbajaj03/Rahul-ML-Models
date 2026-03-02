@@ -1,0 +1,5 @@
+
+Host github-rahulbajaj03
+  HostName github.com
+  User git
+  IdentityFile /Users/rahul.bajaj/.ssh/id_ed25519_rahulbajaj03
