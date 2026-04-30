@@ -1,0 +1,88 @@
+{
+  "threshold": 0.7,
+  "total_images": 573,
+  "per_class_metrics": {
+    "good_image": {
+      "precision": 0.9772,
+      "recall": 0.9804,
+      "f1_score": 0.9788,
+      "support": 306
+    },
+    "blur": {
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1_score": 0.9677,
+      "support": 128
+    },
+    "low_light": {
+      "precision": 0.9521,
+      "recall": 1.0,
+      "f1_score": 0.9754,
+      "support": 139
+    }
+  },
+  "confusion_matrix": [
+    [
+      300,
+      0,
+      6
+    ],
+    [
+      7,
+      120,
+      1
+    ],
+    [
+      0,
+      0,
+      139
+    ]
+  ],
+  "latency": {
+    "average_ms": 27.21,
+    "median_ms": 21.31,
+    "p95_ms": 27.28
+  },
+  "accept_reject": {
+    "accepted": 307,
+    "rejected": 266
+  },
+  "total_misclassifications": 14,
+  "failure_examples": [
+    {
+      "filename": "115_NIKON-D3400-35MM_M_JPG.rf.6d63579c6671c1799cff5d3b2a630259.jpg",
+      "ground_truth": "blur",
+      "predicted": "good_image",
+      "confidence": 0.4571,
+      "path": "/Users/rahul.bajaj/Rahul-ML-Models/Assignment/data/Blur/val/blur_images/115_NIKON-D3400-35MM_M_JPG.rf.6d63579c6671c1799cff5d3b2a630259.jpg"
+    },
+    {
+      "filename": "152_png.rf.bbe7b92256d7666b620bfc3a54198db4.jpg",
+      "ground_truth": "blur",
+      "predicted": "good_image",
+      "confidence": 0.9243,
+      "path": "/Users/rahul.bajaj/Rahul-ML-Models/Assignment/data/Blur/val/blur_images/152_png.rf.bbe7b92256d7666b620bfc3a54198db4.jpg"
+    },
+    {
+      "filename": "185_HONOR-6X_M_jpg.rf.e9e3459de78be0c56e2ff92e45722be7.jpg",
+      "ground_truth": "blur",
+      "predicted": "good_image",
+      "confidence": 0.8526,
+      "path": "/Users/rahul.bajaj/Rahul-ML-Models/Assignment/data/Blur/val/blur_images/185_HONOR-6X_M_jpg.rf.e9e3459de78be0c56e2ff92e45722be7.jpg"
+    },
+    {
+      "filename": "290_IPHONE-SE_M_jpg.rf.1170f964e1c8849b9363597e575152d4.jpg",
+      "ground_truth": "blur",
+      "predicted": "good_image",
+      "confidence": 0.6259,
+      "path": "/Users/rahul.bajaj/Rahul-ML-Models/Assignment/data/Blur/val/blur_images/290_IPHONE-SE_M_jpg.rf.1170f964e1c8849b9363597e575152d4.jpg"
+    },
+    {
+      "filename": "436_png.rf.7b2bfdc2e44adf346704ac8ba3ba203f.jpg",
+      "ground_truth": "blur",
+      "predicted": "good_image",
+      "confidence": 0.9407,
+      "path": "/Users/rahul.bajaj/Rahul-ML-Models/Assignment/data/Blur/val/blur_images/436_png.rf.7b2bfdc2e44adf346704ac8ba3ba203f.jpg"
+    }
+  ]
+}
