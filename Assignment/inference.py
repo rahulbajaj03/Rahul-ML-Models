@@ -53,6 +53,7 @@ def classify_image(model: YOLO, image_path: str, threshold: float) -> dict:
     if len(det.boxes) == 0:
         return {
             "filename": filename,
+            "image_path": image_path,
             "predicted_class": "unknown",
             "confidence": 0.0,
             "status": "Reject",
@@ -76,6 +77,7 @@ def classify_image(model: YOLO, image_path: str, threshold: float) -> dict:
 
     return {
         "filename": filename,
+        "image_path": image_path,
         "predicted_class": label,
         "confidence": round(conf, 4),
         "status": status,
@@ -126,7 +128,7 @@ def run_inference(input_dir: str, model_path: str, output_prefix: str, threshold
     csv_path = f"{output_prefix}.csv"
     with open(csv_path, "w", newline="") as f:
         writer = csv.DictWriter(
-            f, fieldnames=["filename", "predicted_class", "confidence", "status", "inference_time_ms"]
+            f, fieldnames=["filename", "image_path", "predicted_class", "confidence", "status", "inference_time_ms"]
         )
         writer.writeheader()
         writer.writerows(results)
