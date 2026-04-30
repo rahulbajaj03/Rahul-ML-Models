@@ -16,7 +16,7 @@ OCCLUSION_TYPE_LABELS = {
 
 def predict_face_occlusion(image):
     """
-    Accepts PIL image
+    Accepts PIL image sssss
     Returns: (result_string, confidence_or_None)
     """
 
